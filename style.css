@@ -41,8 +41,11 @@
 }
 
 
-
-
+h1{
+    font-size: 3em;
+    letter-spacing: 10px;
+    font-family: monospace;
+}
 
 /*This make 3 sections */
 section{
