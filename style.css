@@ -24,6 +24,7 @@
     border-right: 3px solid;
     width: 100%;
     white-space: nowrap;
+    width: 15ch;
     overflow: hidden;
     animation:
         typing 2s steps(12),
