@@ -1,0 +1,65 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+
+
+
+
+/*Next 3 parts are made for typing Hello World and should be fixed*/
+.text{ /* requiremts for animation*/
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 3px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(12),
+        cursor 0.4s step-end infinite alternate;
+}
+/*cursor blinking*/
+@keyframes cursor{
+    50% {border-color: transparent}
+}
+
+/*typing effects*/
+@keyframes typing{
+    from {width: 0}
+}
+
+
+
+
+
+/*This make 3 sections */
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; 
+    height: 100vh;
+}
+
+.one {
+    background-color: rgb(247,218,216);
+}
+
+.two {
+    background-color:  rgb(242, 219, 231)
+}
+
+.three {
+    background-color: rgb(255, 207, 241)
+}
