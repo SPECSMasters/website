@@ -1,4 +1,8 @@
 # mastersspecs.github
+# Site of the SPECS Club
+<p> Please leave comments as you add any work
+<br>You can add anything new that doesn't violate the rules of The Masters School
+<br>https://specsmasters.github.io/website/</p>
 
 ## v0.2 rc1 notes
 ### github commit notes
