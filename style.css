@@ -48,12 +48,12 @@ you'll want to change
     font-family: monospace;
     border-right: 3px solid;
     width: 100%;
+    white-space: nowrap;
     overflow: hidden;
-    width: 17em;
-    animation: typing 3s steps(25, end), blink-caret 1s step-end infinite;
-    text-wrap: nowrap;
-    height: 1em;
-    margin-top: 33vh;
+    width: 20ch;
+    animation:
+        typing 2s steps(20),
+        cursor 0.4s step-end infinite alternate;
 }
 /* this is for responsiveness at wider screen ratios. 
 
