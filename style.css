@@ -1,138 +1,45 @@
-/* To get a lay of the land, at the top we have big stuff, like body.
-These need to stay at the top for hierarchy reasons.
 
-We then have .text which is the typing  things. We have responsive characteristics
-(I haven't been able to work on getting it to look centered without manually doing it.
-The navbar fucks it up
-
-We then have stuff for the 3 pages, navbar stuff and 
-then we have the desctiption for the footer at the bottom
-
-Weird thing I noticed: When you scroll to the bottom, sometimes the scroll won't
-let you all the way back up
-
--E (October 18th, 2024)
-*/
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
-    scroll-behavior: smooth;
-    scrollbar-width: 5px;
 }
 
-body {
-    background: linear-gradient(0deg, rgba(250,230,220,1) 0%, rgba(242,219,231,1) 50%, rgba(255,207,241,1) 100%);
-background-position: static;
-}
 .container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/*Used MS Copilot to show me what to change here
-
-I changed the .text and if you want to change its length, 
-you'll want to change 
-- width (currently 20) (both under keyframes and .text)
-- steps (23) to be whatever works best (steps = number of characters).
 
 
--E
-  */
-.text{
-    font-size: 3em;
-    letter-spacing: 5px;
+
+
+/*Next 3 parts are made for typing Hello World and should be fixed*/
+.text{ /* requiremts for animation*/
+    font-size: 5em;
+    letter-spacing: 10px;
     font-family: monospace;
     border-right: 3px solid;
     width: 100%;
+    white-space: nowrap;
     overflow: hidden;
-    width: 17em;
-    animation: typing 3s steps(25, end), blink-caret 1s step-end infinite;
-    text-wrap: nowrap;
-    height: 1em;
+    width: 15ch;
+    animation:
+        typing 2s steps(12),
+        cursor 0.4s step-end infinite alternate;
 }
-/* this is for responsiveness at wider screen ratios. 
-
-Note: I haven't worked on screen ratios taller then 1:1 (like a smartphone) 
-so that will be a little awk  
-
--E
-
-*/
-
-@media screen and (min-aspect-ratio: 433/913){
-    .text {
-        margin-top: 4vh;
-        
-    }
-}
-@media screen and (min-aspect-ratio: 603/913){
-    .text {
-        margin-top: 40vh;
-
-    }
+/*cursor blinking*/
+@keyframes cursor{
+    50% {border-color: transparent}
 }
 
-
-@media screen and (min-aspect-ratio: 726/913){
-    .text {
-        margin-top: 35vh;
-
-    }
+/*typing effects*/
+@keyframes typing{
+    from {width: 0}
 }
 
-
-@media screen and (min-aspect-ratio: 816/913){
-    .text {
-        margin-top: 30vh;
-
-    }
-}
-
-
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 17em; }
-}
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
-
-/*  commented out some code I haven't gotten to work and don't need anymore. 
-    Feel free to apply this to anything or delete it
-    -E
-.specs {
-    animation-delay: 3s;
-    animation: fadeInFromAbove 2s ease-out forwards;
-    font-size: 5em;
-    white-space: normal;
-    float: left;
-    
-}
-.specs-div {
-    margin: auto 20px;
-}
-@keyframes fadeInFromAbove {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  
-  }}*/
 
 h1{
     font-size: 3em;
@@ -140,7 +47,7 @@ h1{
     font-family: monospace;
 }
 
-/*This makes 3 sections */
+/*This make 3 sections */
 section{
     display: flex;
     justify-content: center;
@@ -149,76 +56,14 @@ section{
     height: 100vh;
 }
 
-/* This is for the navbar at the top. 
-I haven't figured out how to make it opaque. 
-When you're scrolling the text just goes right through it*/
-.texttop {
-    height: 150px;
-    position: sticky;
-    overflow: hidden;
-    top:0;
-}
-
-.textat-top{ 
-    margin: 0px auto auto 50px;
-}
-.icons {
-    height: 50%;
-    margin: auto 40px auto auto;
-    transition: all 1s ease;
-
-}
-
-.icons:hover {
-    translate: transformY(5px);
-    filter: brightness(0) saturate(100%) invert(12%) sepia(77%) saturate(1683%) hue-rotate(199deg) brightness(96%) contrast(110%);
-
-}
-
-
-.icons2 {
-    height: 100%;
-    margin: auto;
-}
-
-
-/* These are the 3 different sections. Nothing much here*/
 .one {
-    height: calc(80%-150px);
-    scroll-snap-align: none;
-    align-items: normal;
+    background-color: rgb(247,218,216);
 }
 
 .two {
+    background-color:  rgb(242, 219, 231)
 }
 
 .three {
-}
-
-/* Footer box.*/
-.footer {
-    white-space: normal;
-    font-size: 2em;
-    height: 120px;
-    scroll-snap-align: start; 
-    background-color: rgba(255,215,238,1);
-    border: black 3px solid;
-    margin: 0 10px;
-    border-radius: 5px;
-
-}
-
-/* This styles the text inside the footer box */ 
-
-.footertxt {
-    padding: 20px;
-    text-align: center;
-}
-
-/* This is the background the floating footer box is on top of */
-
-.footercont {
-    background-color: rgba(250,230,220,0);
-    margin: 0;
-    padding: 10px 0px;
+    background-color: rgb(255, 207, 241)
 }
