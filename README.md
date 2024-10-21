@@ -2,9 +2,10 @@
 
 ## v0.2 rc1 notes
 ### github commit notes
-added footer, navbar, github link, gradient.
-fixed typing animation
-added mobile responsiveness (limited, only fixing height issues with typing with different screen aspect ratios)
+- added footer, navbar, github link, gradient. fixed typing animation.s
+
+ added mobile responsiveness (limited, only fixing height issues with typing with different screen aspect ratios)
+
 NOTE: committing this will permanently put this work in CC BY SA.
 
 This is a first draft. Add full mobile responsiveness and more content before merging pull request
