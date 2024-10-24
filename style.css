@@ -77,8 +77,8 @@ so that will be a little awk
 @keyframes typing {
   from { width: 0; }
 }
-@keyframes blink-caret {
-  50% { border-color: black; }
+@keyframes cursor {
+  50% { border-color: transperent }
 }
 
 /*  commented out some code I haven't gotten to work and don't need anymore. 
