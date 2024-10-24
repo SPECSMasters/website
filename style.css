@@ -145,19 +145,6 @@ When you're scrolling the text just goes right through it */
 }
 
 
-/* These are the 3 different sections. Nothing much here*/
-.one {
-    height: calc(80%-150px);
-    scroll-snap-align: none;
-    align-items: normal;
-}
-
-.two {
-}
-
-.three {
-}
-
 /* Footer box.*/
 .footer {
     white-space: normal;
