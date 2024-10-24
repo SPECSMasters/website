@@ -78,7 +78,7 @@ so that will be a little awk
   from { width: 0; }
 }
 @keyframes cursor {
-  50% { border-color: transperent }
+  50% { border-color: transparent}
 }
 
 /*  commented out some code I haven't gotten to work and don't need anymore. 
