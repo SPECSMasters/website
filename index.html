@@ -4,32 +4,141 @@
 <head> 
     <title>SPECS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="winter.css">
 </head>
 
 <!-- this is v0.2, updated by Eamon 10/18/24 -->
 <body>
     <div class="container">
-        <section class="texttop">            
+        
+        <div class="initial-snow">
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+            <div class="snow">&#10052;</div>
+        </div>
+
+
+
+
+
+        <div class="texttop">            
             <a ><h1 class="textat-top">SPECS</h1></a>
             <a class="icons" href="https://github.com/specsmasters"><img class="icons2" title="Our Github Page" src="fe--github.png"></a>
-        </section>
+        </div>
+
 
         <section class = "one">
-            <h1 class="text">Masters' Premiere CS Club</h1>
+            <h1 class="text">Happy Holidays!</h1>
         </section>
 
-        <section class = "two">
+        <section class="two">
             <h1>What does SPECS stand for?</h1>
+            <p><strong>SPECS (Students Pursuing Education in Computer Science) is a student-led club at The Masters School that encourages a passion for technology and computer science. The club offers resources, opportunities, and support for students interested in learning more about the field. SPECS aims to create a community where members can explore, grow, and deepen their knowledge of computer science in a supportive and engaging environment.</strong></p>
         </section>
 
-        <section class = "three">
-            <h1>Our projects</h1>
+        <section class="three">
+            <div class="left">
+                <h3>Penguin Clicker: <span class="penguin-fat" id="scoreDisplay">0</span></h3>
+            </div>
+            <canvas id="canvas" width="600" height="400" onclick="incrementPenguin()"></canvas>
         </section>
-<div class="footercont">
-        <section class="footer">
-            <p class="footertxt">This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1"> CC BY-SA 4.0</a> by SPECS, a Masters NY club</p>
+        
+        <script>
+            // Function to set the score in a cookie
+            function setScoreCookie(score) {
+                let expiryDate = new Date();
+                expiryDate.setFullYear(expiryDate.getFullYear() + 1); // Expire in 1 year
+                document.cookie = "penguinClickerScore=" + score + "; expires=" + expiryDate.toUTCString() + "; path=/";
+            }
+        
+            // Function to get the score from the cookie
+            function getScoreFromCookie() {
+                let name = "penguinClickerScore=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(';');
+                
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i].trim();
+                    if (c.indexOf(name) === 0) {
+                        return parseInt(c.substring(name.length, c.length)); // Return the stored score
+                    }
+                }
+                return 0; // Default to 0 if no score is found
+            }
+        
+            // Function to handle penguin click and increment score
+            function incrementPenguin() {
+                let score = getScoreFromCookie();  // Get the current score from cookie
+                score++;  // Increment the score
+                setScoreCookie(score);  // Save the updated score to the cookie
+                document.getElementById("scoreDisplay").textContent = score;  // Update the displayed score
+            }
+        
+            // Set the initial score when the page loads
+            window.onload = function() {
+                let storedScore = getScoreFromCookie();  // Retrieve score from cookie
+                document.getElementById("scoreDisplay").textContent = storedScore;  // Display the initial score
+            };
+        </script>
+        
+        
+        <!--License-->
+        <div class="footercont">
+            <section class="footer">
+                <p class="footertxt">This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1"> CC BY-SA 4.0</a> by SPECS, a Masters NY club</p>
                 </section></div>
-    </div>
+        </div>
+
+
+    <script src="penguin.js"></script>
+    <script src="cookie.js"></script>
 </body>
 
 </html>
