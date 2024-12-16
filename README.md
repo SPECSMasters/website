@@ -27,11 +27,11 @@ This is a first draft. Add full mobile responsiveness and more content before me
 
 ## v0.3 rc1 notes
 ### github commit notes
--Fixed the header, just switched the position to absolute. Added the description to SPECS, which should be changed later.
--Added snow animation(copied and adjusted from open source)
--New video game instead of "our projects".
+- Fixed the header, just switched the position to absolute. Added the description to SPECS, which should be changed later.
+- Added snow animation(copied and adjusted from open source)
+- New video game instead of "our projects".
 ### known issues
--Mobile responsiveness.
+- Mobile responsiveness.
 ### updates needed
--Add more content to the clicker game.
+- Add more content to the clicker game.
 
