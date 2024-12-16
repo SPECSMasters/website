@@ -1,15 +1,3 @@
-/* To get a lay of the land, at the top we have big stuff, like body.
-These need to stay at the top for hierarchy reasons.
-
-We then have .text which is the typing  things. We have responsive characteristics
-(I haven't been able to work on getting it to look centered without manually doing it.
-The navbar fucks it up
-
-We then have stuff for the 3 pages, navbar stuff and 
-then we have the desctiption for the footer at the bottom
-
--E (October 18th, 2024)
-*/
 
 *{
     margin: 0;
@@ -22,7 +10,10 @@ then we have the desctiption for the footer at the bottom
 body {
     background: linear-gradient(0deg, rgba(250,230,220,1) 0%, rgba(242,219,231,1) 50%, rgba(255,207,241,1) 100%);
 background-position: static;
+user-select: none;
 }
+
+
 .container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -41,19 +32,20 @@ you'll want to change
 
 -E
   */
-.text{
+  .text {
+    align-items: center;
     font-size: 3em;
     letter-spacing: 5px;
     font-family: monospace;
-    border-right: 3px solid;
-    width: 100%;
+    border-right: 5px solid;
     white-space: nowrap;
     overflow: hidden;
-    width: 25ch;
+    width: 19ch;               /* Set a fixed width for the typing effect */
     animation:
-        typing 2s steps(25),
+        typing 1.5s steps(15),
         cursor 0.4s step-end infinite alternate;
 }
+
 /* this is for responsiveness at wider screen ratios. 
 
 Note: I haven't worked on screen ratios taller then 1:1 (like a smartphone) 
@@ -61,7 +53,8 @@ so that will be a little awk
 
 -E
 
-*/
+I had to stop this, since the placement of the phrase was ugly. Can do this another time.
+
 @media screen and (min-aspect-ratio: 544/433) {
     .text {
         margin-top: 30vh;
@@ -73,6 +66,7 @@ so that will be a little awk
         margin-top: 25vh;
     }
 }
+*/
 
 @keyframes typing {
   from { width: 0; }
@@ -106,13 +100,39 @@ so that will be a little awk
   
   }}*/
 
+
+  /*text used for website.*/ 
 h1{
     font-size: 3em;
     letter-spacing: 10px;
     font-family: monospace;
 }
 
-/*This makes 3 sections */
+h3{
+    font-size: 3em;
+    letter-spacing: 10px;
+    font-family: monospace;
+}
+
+.two {
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Horizontally center items */
+    justify-content: center; /* Vertically center items */
+    height: 100vh; /* Full viewport height (optional, adjust as needed) */
+    text-align: center; /* Ensure text is centered */
+}
+
+
+/* Styling for p */
+p {
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-family: monospace;
+    margin-top: 0;
+}
+
+/*This is the code for the section*/
 section{
     display: flex;
     justify-content: center;
@@ -125,23 +145,22 @@ section{
 I haven't figured out how to make it opaque. 
 When you're scrolling the text just goes right through it */
 .texttop {
-    height: 150px;
-    position: sticky;
-    overflow: hidden;
-    top:0;
+    position: fixed;
+    top: 10px;
 }
 
-.textat-top{ 
-    margin: 0px auto auto 50px;
-}
 .icons {
-    height: 50%;
-    margin: auto 40px auto auto;
+    height:75px;
+    position: fixed; /* Allows positioning relative to the nearest positioned ancestor */
+    right: 13px; /* Moves the icon to the right */
+    top: 0;
 }
 
 .icons2 {
-    height: 100%;
-    margin: auto;
+    height:75px;
+    position: fixed; /* Allows positioning relative to the nearest positioned ancestor */
+    right: 13px; /* Moves the icon to the right */
+    top: 0;
 }
 
 
@@ -164,6 +183,8 @@ When you're scrolling the text just goes right through it */
     padding: 20px;
     text-align: center;
 }
+
+
 
 /* This is the background the floating footer box is on top of */
 
