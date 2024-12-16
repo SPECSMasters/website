@@ -21,6 +21,9 @@ user-select: none;
     height: 100vh;
 }
 
+#canvas {
+    cursor:pointer;
+}
 
 
 /*Used MS Copilot to show me what to change here
@@ -147,14 +150,15 @@ I haven't figured out how to make it opaque.
 When you're scrolling the text just goes right through it */
 .texttop {
     position: fixed;
-    top: 10px;
+    top: 20px;
+    left: 20px;
 }
 
 .icons {
     height:75px;
     position: fixed; /* Allows positioning relative to the nearest positioned ancestor */
-    right: 13px; /* Moves the icon to the right */
-    top: 0;
+    right: 20px; /* Moves the icon to the right */
+    top: 20px;
 }
 
 .icons2 {
@@ -168,7 +172,7 @@ When you're scrolling the text just goes right through it */
 /* Footer box.*/
 .footer {
     white-space: normal;
-    font-size: 2em;
+    font-size: 1em;
     height: 120px;
     scroll-snap-align: start; 
     background-color: rgba(255,215,238,1);
