@@ -125,6 +125,8 @@ h3{
     justify-content: center; /* Vertically center items */
     height: 100vh; /* Full viewport height (optional, adjust as needed) */
     text-align: center; /* Ensure text is centered */
+    width: 900px;
+    margin: auto;
 }
 
 
