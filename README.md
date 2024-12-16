@@ -23,3 +23,15 @@ This is a first draft. Add full mobile responsiveness and more content before me
 - there isn't any content lol
 - navbar might want to have different pages to nav to besides home and github page
 - maybe a section about the markers of the website? something to consider
+
+
+## v0.3 rc1 notes
+### github commit notes
+-Fixed the header, just switched the position to absolute. Added the description to SPECS, which should be changed later.
+-Added snow animation(copied and adjusted from open source)
+-New video game instead of "our projects".
+### known issues
+-Mobile responsiveness.
+### updates needed
+-Add more content to the clicker game.
+
