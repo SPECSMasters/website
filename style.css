@@ -297,3 +297,26 @@ When you're scrolling the text just goes right through it */
 .submit-btn:active {
     transform: translateY(2px);
 }
+
+/* Success message styles */
+.success-message {
+    background-color: rgba(144, 238, 144, 0.9);
+    border: 3px solid #4CAF50;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-message h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #2E7D2E;
+    letter-spacing: 3px;
+}
+
+.success-message p {
+    font-size: 1.1em;
+    color: #2E7D2E;
+    margin: 0;
+}
