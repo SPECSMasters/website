@@ -200,3 +200,100 @@ When you're scrolling the text just goes right through it */
     margin: 0;
     padding: 10px 0px;
 }
+
+/* Signup form styles */
+.signup-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.signup-container {
+    background-color: rgba(255,215,238,0.8);
+    border: black 3px solid;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.signup-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.signup-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.signup-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    font-family: monospace;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.9);
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(71, 196, 255, 1);
+    background-color: rgba(255,255,255,1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-family: monospace;
+    font-weight: bold;
+    background-color: rgba(71, 196, 255, 1);
+    color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgba(0, 110, 239, 1);
+}
+
+.submit-btn:active {
+    transform: translateY(2px);
+}
