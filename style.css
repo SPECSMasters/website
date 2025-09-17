@@ -200,3 +200,305 @@ When you're scrolling the text just goes right through it */
     margin: 0;
     padding: 10px 0px;
 }
+
+/* Signup form styles */
+.signup-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.signup-container {
+    background-color: rgba(255,215,238,0.8);
+    border: black 3px solid;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.signup-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+.signup-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.signup-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    font-family: monospace;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.9);
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: rgba(71, 196, 255, 1);
+    background-color: rgba(255,255,255,1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-family: monospace;
+    font-weight: bold;
+    background-color: rgba(71, 196, 255, 1);
+    color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: rgba(0, 110, 239, 1);
+}
+
+.submit-btn:active {
+    transform: translateY(2px);
+}
+
+.signup-link {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    min-width: 200px;
+}
+
+.signup-link:hover {
+    background-color: rgba(0, 110, 239, 1);
+    color: white;
+}
+
+/* Success message styles */
+.success-message {
+    background-color: rgba(144, 238, 144, 0.9);
+    border: 3px solid #4CAF50;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-message h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #2E7D2E;
+    letter-spacing: 3px;
+}
+
+.success-message p {
+    font-size: 1.1em;
+    color: #2E7D2E;
+    margin: 0 0 20px 0;
+}
+
+.success-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.secondary-btn {
+    background-color: rgba(255, 165, 0, 1);
+    color: white;
+    border: 3px solid black;
+}
+
+.secondary-btn:hover {
+    background-color: rgba(255, 140, 0, 1);
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    font-family: monospace;
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 1);
+    color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.back-home-btn:hover {
+    background-color: rgba(100, 100, 100, 1);
+}
+
+/* Dedicated signup page styles */
+.signup-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(0deg, rgba(250,230,220,1) 0%, rgba(242,219,231,1) 50%, rgba(255,207,241,1) 100%);
+}
+
+.signup-nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.back-link {
+    font-family: monospace;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: rgba(255,255,255,0.8);
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: rgba(255,255,255,1);
+}
+
+/* Mobile responsiveness improvements */
+@media screen and (max-width: 768px) {
+    .signup-container {
+        padding: 20px;
+        width: 95%;
+        max-width: none;
+        margin: 60px 0 20px 0;
+    }
+    
+    .signup-container h1 {
+        font-size: 2em;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+    
+    .signup-container p {
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .submit-btn {
+        padding: 15px;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+    }
+    
+    .success-message {
+        padding: 20px;
+    }
+    
+    .success-message h3 {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+    }
+    
+    .success-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .secondary-btn,
+    .back-home-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+    }
+    
+    .signup-nav {
+        position: static;
+        margin-bottom: 20px;
+        align-self: flex-start;
+    }
+    
+    .back-link {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .signup-page {
+        padding: 10px;
+    }
+    
+    .signup-container {
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .signup-container h1 {
+        font-size: 1.8em;
+        letter-spacing: 2px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+    }
+}
